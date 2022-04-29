@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570ee630404147ac8d35a0bdba06ed8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <TowerAnimator>k__BackingField: {fileID: 6758116056422548003}
 --- !u!95 &6758116056422548003
 Animator:
   serializedVersion: 4
