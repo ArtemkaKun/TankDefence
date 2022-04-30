@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using ExplosionSystem;
+using PlayerSystem;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -46,6 +47,7 @@ namespace TankSystem
 		{
 			Destroy(gameObject);
 			await FindObjectOfType<ExplosionEffectManager>().MakeExplosion(transform.position);
+			FindObjectOfType<GameManager>().ReactOnTankWasDestroyed();
 		}
 	}
 }
