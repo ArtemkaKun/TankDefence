@@ -43,6 +43,12 @@ namespace TankSystem
 			}
 		}
 
+		private void OnBecameInvisible ()
+		{
+			Destroy(gameObject);
+			FindObjectOfType<GameManager>().ReactOnTankWasPassed();
+		}
+
 		private async UniTaskVoid DestroyAfterDelay ()
 		{
 			Destroy(gameObject);
