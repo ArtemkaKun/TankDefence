@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Speed>k__BackingField: 1
-  <HPInSeconds>k__BackingField: 2.5
+  <HPInSeconds>k__BackingField: 2
 --- !u!1001 &1474702154422350063
 PrefabInstance:
   m_ObjectHideFlags: 0
