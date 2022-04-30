@@ -10,13 +10,13 @@ namespace TankSystem
 		[field: SerializeField]
 		private float Speed { get; set; }
 		[field: SerializeField]
-		private uint HP { get; set; }
+		private float HPInSeconds { get; set; }
 		
 		private float CurrentHP { get; set; }
 
 		private void Awake ()
 		{
-			CurrentHP = HP;
+			CurrentHP = HPInSeconds;
 		}
 
 		private void Update ()
@@ -25,9 +25,10 @@ namespace TankSystem
 			{
 				if (Touchscreen.current.primaryTouch.isInProgress == true)
 				{
-					if (Vector2.Distance(Camera.main.ScreenToWorldPoint(Touchscreen.current.primaryTouch.position.ReadValue()), transform.position) < 0.1f)
+					if (Vector2.Distance(Camera.main.ScreenToWorldPoint(Touchscreen.current.primaryTouch.position.ReadValue()), transform.position) < 0.5f)
 					{
-						CurrentHP -= 1;
+						CurrentHP -= Time.deltaTime;
+						Debug.Log(CurrentHP);
 
 						if (CurrentHP <= 0)
 						{

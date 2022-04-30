@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Speed>k__BackingField: 1
-  <HP>k__BackingField: 100
+  <HPInSeconds>k__BackingField: 2.5
 --- !u!61 &3642491800152523584
 BoxCollider2D:
   m_ObjectHideFlags: 0
