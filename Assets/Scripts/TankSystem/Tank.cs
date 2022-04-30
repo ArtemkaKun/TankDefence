@@ -29,7 +29,6 @@ namespace TankSystem
 					if (Vector2.Distance(Camera.main.ScreenToWorldPoint(Touchscreen.current.primaryTouch.position.ReadValue()), transform.position) < 0.5f)
 					{
 						CurrentHP -= Time.deltaTime;
-						Debug.Log(CurrentHP);
 
 						if (CurrentHP <= 0)
 						{
@@ -45,8 +44,11 @@ namespace TankSystem
 
 		private void OnBecameInvisible ()
 		{
-			Destroy(gameObject);
-			FindObjectOfType<GameManager>().ReactOnTankWasPassed();
+			if (CurrentHP > 0)
+			{
+				Destroy(gameObject);
+				FindObjectOfType<GameManager>().ReactOnTankWasPassed();
+			}
 		}
 
 		private async UniTaskVoid DestroyAfterDelay ()
