@@ -10,8 +10,18 @@ namespace TankManagementSystem
 		[field: SerializeField]
 		private int SpawnIntervalInMilliseconds { get; set; }
 		[field: SerializeField]
+		private int SpawnIntervalStep { get; set; }
+		[field: SerializeField]
 		private SpawnPointsManager SpawnPoints { get; set; }
 
+		public void DecreaseSpawnInterval()
+		{
+			if (SpawnIntervalInMilliseconds > 2000)
+			{
+				SpawnIntervalInMilliseconds -= SpawnIntervalStep;
+			}
+		}
+		
 		private void Awake ()
 		{
 			StartSpawning();
