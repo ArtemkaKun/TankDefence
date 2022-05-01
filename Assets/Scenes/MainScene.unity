@@ -303,6 +303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TankPrefab>k__BackingField: {fileID: 600589875808464756, guid: 17a97356f8427d64ca98a5139fca7ec5, type: 3}
   <SpawnIntervalInMilliseconds>k__BackingField: 5000
+  <SpawnIntervalStep>k__BackingField: 100
   <SpawnPoints>k__BackingField:
     <SpawnPoints>k__BackingField:
     - {fileID: 1505706837}
@@ -548,6 +549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <GameOverScreen>k__BackingField: {fileID: 1644813641}
   <MaxTanksToPass>k__BackingField: 3
+  <Spawner>k__BackingField: {fileID: 619415387}
 --- !u!4 &1887756659
 Transform:
   m_ObjectHideFlags: 0
