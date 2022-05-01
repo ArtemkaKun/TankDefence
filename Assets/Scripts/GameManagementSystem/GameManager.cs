@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TankManagementSystem;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace PlayerSystem
@@ -9,7 +10,9 @@ namespace PlayerSystem
 		private UIDocument GameOverScreen { get; set; }
 		[field: SerializeField]
 		private uint MaxTanksToPass { get; set; }
-
+		[field: SerializeField]
+		private TanksSpawner Spawner { get; set; }
+		
 		private PlayerData PlayerData { get; } = new PlayerData();
 
 		private void Awake()
@@ -30,6 +33,7 @@ namespace PlayerSystem
 		public void ReactOnTankWasDestroyed ()
 		{
 			PlayerData.TanksDestroyed += 1;
+			Spawner.DecreaseSpawnInterval();
 		}
 	}
 }
